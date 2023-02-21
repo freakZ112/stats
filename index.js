@@ -68,9 +68,9 @@ var aVehicleTypesNew = aVehicleTypesNew || [];
         aCredits = await getApi("credits");
     }
 
-    $('head').append(`<link rel="stylesheet" href="${ fum_url }/fuhrparkmanager/main.css?${ new Date().getTime() }" type="text/css" />`); // Stelle 2
+    $('head').append(`<link rel="stylesheet" href="${ fum_url }/stats/main/main.css?${ new Date().getTime() }" type="text/css" />`);
 
-    await $.getScript(`${ fum_url }/fuhrparkmanager/modal.js?${ fum_datestring }`); //Stelle 3
-    await $.getScript(`${ fum_url }/fuhrparkmanager/initial_functions.js?${ fum_datestring }`);  // Stelle 4
-    await $.getScript(`${ fum_url }/fuhrparkmanager/onclick.js?${ fum_datestring }`);  // Stelle 5
+    await $.getScript(`${ fum_url }/stats/main/modal.js?${ fum_datestring }`); 
+    await $.getScript(`${ fum_url }/stats/main/ini_fun.js?${ fum_datestring }`);  
+    await $.getScript(`${ fum_url }/stats/main/oc.js?${ fum_datestring }`);
 })();
