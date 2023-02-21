@@ -83,5 +83,5 @@ for (var i = 0; i < fum_options.dropdown.sort.length; i++) {
 
 $("#navbar_profile_link")
     .parent()
-    .after(`<li role="presentation"><a style="cursor:pointer" id="vehicleManagement" data-toggle="modal" data-target="#tableStatus" ><img class="icon icons8-Share" src="${ fum_url }/stats/RTW_Icon_Furpark.png" width="24" height="24"> Fuhrpark-Manager</a>
+    .after(`<li role="presentation"><a style="cursor:pointer" id="vehicleManagement" data-toggle="modal" data-target="#tableStatus" ><img class="icon icons8-Share" src="${ fum_url }/stats/main/RTW_Icon_Furpark.png" width="24" height="24"> Fuhrpark-Manager</a>
     </li>`);
