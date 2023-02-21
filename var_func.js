@@ -102,6 +102,6 @@ function greetings() {
 
 async function apiDropdown() {
     await refreshApi();
-    await $.getScript(`${ fum_url }/stats/dropdown.js?${ fum_datestring }`);
+    await $.getScript(`${ fum_url }/stats/main/dropdown.js?${ fum_datestring }`);
     createDropdown();
 }
