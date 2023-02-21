@@ -1,5 +1,5 @@
 $("body").on("click", "#vehicleManagement", async function() {
-    await $.getScript(`${ fum_url }/fuhrparkmanager/vehicle_table.js?${ fum_datestring }`); // Stelle 5.1
+    await $.getScript(`${ fum_url }/stats/main/ve_tab.js?${ fum_datestring }`); 
     $('#filterDispatchCenter').html(`<option selected>wird geladen ...</option>`);
     $('#filterType').html(`<option selected>wird geladen ...</option>`);
     $('#tableStatusLabel').html('');
@@ -383,7 +383,7 @@ $("body").on("click", "#filterSeg", function() {
 });
 
 $("body").on("click", "#player", async function() {
-    await $.getScript(`${ fum_url }/fuhrparkmanager/playerinfos.js?${ fum_datestring }`); // Stelle 5.2
+    await $.getScript(`${ fum_url }/stats/main/p_infos.js?${ fum_datestring }`);
     fum_options.status.count = 0;
     $('#fms1').removeClass().addClass(fum_btn.i);
     $('#fms2').removeClass().addClass(fum_btn.i);
