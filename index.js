@@ -1,13 +1,11 @@
-// https://scripts.drtraxx.de/fuhrparkmanager/index.js?_=
-
-const fum_url = "https://github.com/freakZ112", /* live */
+const fum_url = "https://raw.githubusercontent.com/freakZ112", /* live */
     fum_datestring = new Date().getTime();
 
 var aVehicleTypesNew = aVehicleTypesNew || [];
 
 (async function () {
 
-    await $.getScript(`${ fum_url }/fuhrparkmanager/variables_functions.js?${ fum_datestring }`); // siehe folgender Code Stelle: 1
+    await $.getScript(`${ fum_url }/stats/main/var_func.js?${ fum_datestring }`);
 
     const securityCheck = await checkUserId(user_id);
 
@@ -53,7 +51,7 @@ var aVehicleTypesNew = aVehicleTypesNew || [];
 
     if (aVehicleTypesNew.length === 0) {
         if (!localStorage.aVehicleTypesNew || JSON.parse(localStorage.aVehicleTypesNew).lastUpdate < (new Date().getTime() - 5 * 1000 * 60)) {
-            await $.getJSON("https://api.lss-cockpit.de/de_DE/vehicletypes.json").done(data => localStorage.setItem('aVehicleTypesNew', JSON.stringify({ lastUpdate: new Date().getTime(), value: data }))); // hier kann man auch meine json einfügen
+            await $.getJSON("https://raw.githubusercontent.com/freakZ112/vehicletypes/main/vehicletypes.json").done(data => localStorage.setItem('aVehicleTypesNew', JSON.stringify({ lastUpdate: new Date().getTime(), value: data }))); // hier kann man auch meine json einfügen
 			        }
         aVehicleTypesNew = JSON.parse(localStorage.aVehicleTypesNew).value;
     }
